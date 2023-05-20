@@ -1,4 +1,4 @@
-spring.sendgrid.api-key: "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"
+spring.sendgrid.api-key: "SENDGRID_API_KEY_TO_GENERATE"
 spring:
   mail:
     host: smtp.sendgrid.net
