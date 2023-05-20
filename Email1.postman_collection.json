@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "a5865456-745b-4f0c-8b83-07cf5f840156",
+		"name": "Email1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26099444",
+		"_collection_link": "https://grey-eclipse-85596.postman.co/workspace/My-Workspace~86a21c66-3080-4d38-8c0b-baa024158f96/collection/26099444-a5865456-745b-4f0c-8b83-07cf5f840156?action=share&creator=26099444&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Send email to my self",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contactId\":1,\r\n    \"title\":\"Prova email\",\r\n    \"text\":\"Questa è una email di prova\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/notification?id=1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"notification"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send email to a non existing user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contactId\":1,\r\n    \"title\":\"Prova email\",\r\n    \"text\":\"Questa è una email di prova\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/notification?id=6",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"notification"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
