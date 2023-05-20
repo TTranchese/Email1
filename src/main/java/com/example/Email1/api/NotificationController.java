@@ -4,7 +4,6 @@ import com.example.Email1.DTO.NotificationDTO;
 import com.example.Email1.email.MailService;
 import com.example.Email1.entities.Student;
 import com.example.Email1.services.StudentService;
-import com.sendgrid.helpers.mail.Mail;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,9 +15,9 @@ import java.util.Optional;
 @RequestMapping("/notification")
 public class NotificationController {
 	@Autowired
-	MailService mailService;
+	private MailService mailService;
 	@Autowired
-	StudentService studentService;
+	private StudentService studentService;
 	
 	@PostMapping
 	public ResponseEntity<String> sendEmail(@RequestParam int id, @RequestBody NotificationDTO notificationDTO) {
